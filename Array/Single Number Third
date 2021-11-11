@@ -1,0 +1,13 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        dict1 = {}
+        
+        for i in nums:
+            if i not in dict1:
+                dict1[i] = 1
+            else :
+                del dict1[i]
+                
+        single_n = list(dict1.keys())[0]
+        
+        return single_n
