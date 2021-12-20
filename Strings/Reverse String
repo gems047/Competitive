@@ -1,0 +1,26 @@
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        '''
+        Both of below solutions are working
+        '''
+        
+        left = 0
+        right = len(s) - 1
+        #while(left <= right) :
+            #tmp = s[left]
+            #s[left] = s[right]
+            #s[right] = tmp
+            #left +=1 
+            #right -= 1
+            
+        j = len(s) - 1    
+        for i in range(len(s)//2) :
+            tmp = s[i]
+            s[i] = s[j]
+            s[j] = tmp
+             
+            j -= 1
+            
